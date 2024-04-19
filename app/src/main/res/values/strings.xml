@@ -7,7 +7,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="layout_list">List</string>
     <string name="layout_grid">Grid</string>
-    <string name="cuak">cuak</string>
+
 
     <string-array name="data_league_group">
         <item>Premier League</item>

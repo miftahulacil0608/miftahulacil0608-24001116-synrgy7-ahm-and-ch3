@@ -1,36 +1,28 @@
 package com.example.recyclerviewinfragment
+
 import android.content.res.Resources
 import com.example.recyclerviewinfragment.data.LeagueGroup
-import com.example.recyclerviewinfragment.data.ListTeam
-
+import com.example.recyclerviewinfragment.data.Teams
 object Helper {
-
-
-    //function untuk melakukan input data pada class fragmentListLeagueGroupFragment
-    fun listTeam(resources: Resources,imgResources:Int,titleResources:Int,cityTeamResources:Int):ArrayList<ListTeam>{
-        val imgTeam = resources.obtainTypedArray(imgResources)
-        val titleTeam = resources.getStringArray(titleResources)
-        val cityTeam = resources.getStringArray(cityTeamResources)
-        val listTeamItem = ArrayList<ListTeam>()
-        for (i in titleTeam.indices){
-            val data = ListTeam(imgTeam.getResourceId(i,-1),titleTeam[i],cityTeam[i])
-            listTeamItem.add(data)
-        }
-        return listTeamItem
-    }
-
-
-    //function untuk melakukan input data listLeagueGroup pada class DetailRecyclerViewFragment
-    fun listLeagueGroup(resources: Resources,dataImagesResources:Int,dataTitleResources:Int,listTeam:ArrayList<ArrayList<ListTeam>>):ArrayList<LeagueGroup>{
-        val dataImages = resources.obtainTypedArray(dataImagesResources)
-        val dataTitleLeague = resources.getStringArray(dataTitleResources)
+    fun addListLeagueGroup(resources: Resources,resImg:Int,resTitle:Int,listTeam:ArrayList<ArrayList<Teams>>):ArrayList<LeagueGroup>{
+        val title = resources.getStringArray(resTitle)
+        val img = resources.obtainTypedArray(resImg)
         val listLeague = ArrayList<LeagueGroup>()
-        for (i in dataTitleLeague.indices){
-            val data = LeagueGroup(dataImages.getResourceId(i,-1),dataTitleLeague[i], listTeam[i])
-            listLeague.add(data)
+        for (i in title.indices){
+            listLeague.add(LeagueGroup(img.getResourceId(i,-1),title[i],listTeam[i]))
         }
         return listLeague
     }
+    fun addListTeams(resources: Resources,resImg: Int,resTitle:Int,resCity:Int):ArrayList<Teams>{
+        val imgTeam = resources.obtainTypedArray(resImg)
+        val titleTeam = resources.getStringArray(resTitle)
+        val cityTeam = resources.getStringArray(resCity)
+        val listTeams = ArrayList<Teams>()
+        for (i in titleTeam.indices){
+            listTeams.add(Teams(imgTeam.getResourceId(i,-1),titleTeam[i],cityTeam[i]))
+        }
+        return listTeams
 
 
+    }
 }

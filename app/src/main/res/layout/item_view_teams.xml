@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view_team="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -24,7 +22,7 @@
             android:layout_height="120dp"
             android:padding="8dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/liverpool"
+            tools:background="@mipmap/ic_launcher"
             card_view_team:layout_constraintBottom_toBottomOf="parent"
             card_view_team:layout_constraintStart_toStartOf="parent"
             card_view_team:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +31,6 @@
             android:id="@+id/divider"
             android:layout_width="1dp"
             android:layout_height="0dp"
-
             android:background="@android:color/darker_gray"
             card_view_team:layout_constraintBottom_toBottomOf="parent"
             card_view_team:layout_constraintStart_toEndOf="@id/img_team"
@@ -50,7 +47,6 @@
             android:textAlignment="center"
             android:textSize="18sp"
             android:textStyle="bold"
-
             card_view_team:layout_constraintEnd_toEndOf="parent"
             card_view_team:layout_constraintStart_toEndOf="@id/divider"
             card_view_team:layout_constraintTop_toTopOf="parent" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.DetailRecyclerViewFragment">
+    tools:context=".fragment.DetailLeagueTeams">
 
 
     <!--image-->
@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:background="@drawable/premier_league_logo" />
+        tools:background="@drawable/ic_launcher_background" />
 
     <!-- title-->
     <com.google.android.material.textview.MaterialTextView
@@ -41,8 +41,7 @@
         app:layout_constraintTop_toBottomOf="@id/title_league"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/card_view_team"
-
+        tools:listitem="@layout/item_view_teams"
         />
 
 

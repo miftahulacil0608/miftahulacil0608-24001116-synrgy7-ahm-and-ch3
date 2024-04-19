@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view_league_group="http://schemas.android.com/apk/res-auto"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:item_view_league="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card_view_league_group"
+    android:id="@+id/item_view_league"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
@@ -10,7 +10,8 @@
     android:layout_marginTop="4dp"
     android:layout_marginEnd="8dp"
     android:layout_marginBottom="4dp"
-    card_view_league_group:cardCornerRadius="10dp">
+    item_view_league:cardCornerRadius="10dp"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,30 +22,31 @@
             android:layout_width="match_parent"
             android:layout_height="230dp"
             android:scaleType="fitCenter"
-            android:padding="8dp"
-            android:src="@drawable/premier_league_logo"
-            card_view_league_group:layout_constraintEnd_toEndOf="parent"
-            card_view_league_group:layout_constraintStart_toStartOf="parent"
-            card_view_league_group:layout_constraintTop_toTopOf="parent" />
+            item_view_league:layout_constraintEnd_toEndOf="parent"
+            item_view_league:layout_constraintStart_toStartOf="parent"
+            item_view_league:layout_constraintTop_toTopOf="parent"
+            tools:background="@mipmap/ic_launcher" />
 
         <View
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@android:color/darker_gray"
-            card_view_league_group:layout_constraintTop_toBottomOf="@id/img_league" />
+            item_view_league:layout_constraintTop_toBottomOf="@id/img_league" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/title_league_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="8dp"
             android:text="@string/title_league"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:padding="8dp"
-            card_view_league_group:layout_constraintEnd_toEndOf="parent"
-            card_view_league_group:layout_constraintStart_toStartOf="parent"
-            card_view_league_group:layout_constraintTop_toBottomOf="@id/img_league" />
+            item_view_league:layout_constraintEnd_toEndOf="parent"
+            item_view_league:layout_constraintStart_toStartOf="parent"
+            item_view_league:layout_constraintTop_toBottomOf="@id/img_league" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.cardview.widget.CardView>
+
+</com.google.android.material.card.MaterialCardView>
