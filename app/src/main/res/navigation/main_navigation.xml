@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/listLeagueGroup"
         android:name="com.example.recyclerviewinfragment.fragment.ListLeagueGroup"
-        android:label="fragment_list_league_group"
+        android:label="League"
         tools:layout="@layout/fragment_list_league_group" >
         <action
             android:id="@+id/action_listLeagueGroup_to_detailLeagueTeams"
@@ -16,7 +16,7 @@
     <fragment
         android:id="@+id/detailLeagueTeams"
         android:name="com.example.recyclerviewinfragment.fragment.DetailLeagueTeams"
-        android:label="fragment_detail_league_teams"
+        android:label="Teams"
         tools:layout="@layout/fragment_detail_league_teams" >
 
         <argument

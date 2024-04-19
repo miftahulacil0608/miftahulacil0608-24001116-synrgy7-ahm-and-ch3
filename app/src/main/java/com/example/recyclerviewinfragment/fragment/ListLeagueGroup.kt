@@ -32,7 +32,7 @@ class ListLeagueGroup : Fragment(), RecyclerviewClickListener<LeagueGroup> {
         savedInstanceState: Bundle?
     ): View {
 
-        (activity as AppCompatActivity).supportActionBar?.title = "League"
+
         return FragmentListLeagueGroupBinding.inflate(inflater, container, false).also {
             binding = it
         }.root
